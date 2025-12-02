@@ -5,6 +5,7 @@ import 'profile_screen.dart';
 import 'daily_routine_screen.dart';
 import 'emotions_screen.dart';
 import 'journal_screen.dart';
+import 'tasks_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -108,7 +109,7 @@ class HomeDashboard extends StatelessWidget {
                     Icons.check_circle_outline,
                     AppColors.cardGreen,
                     AppColors.iconGreen,
-                    () {}, // Placeholder
+                    () => Navigator.push(context, MaterialPageRoute(builder: (_) => const TasksScreen())),
                   ),
                   _buildMenuCard(
                     context,
